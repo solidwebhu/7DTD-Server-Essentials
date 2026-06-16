@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{29F9335E-F5A8-4252-B177-3882531C4545}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OperenciaManager</RootNamespace>
+    <AssemblyName>OperenciaManager</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>D:\SteamLibrary\steamapps\common\7 Days to Die Dedicated Server\Mods\0_TFP_Harmony\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\SteamLibrary\steamapps\common\7 Days to Die Dedicated Server\7DaysToDieServer_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="AstarPathfindingProject">
+      <HintPath>D:\SteamLibrary\steamapps\common\7 Days to Die Dedicated Server\7DaysToDieServer_Data\Managed\AstarPathfindingProject.dll</HintPath>
+    </Reference>
+    <Reference Include="DiscordWebhook">
+      <HintPath>Refs\DiscordWebhook.dll</HintPath>
+    </Reference>
+    <Reference Include="InControl">
+      <HintPath>D:\SteamLibrary\steamapps\common\7 Days to Die Dedicated Server\7DaysToDieServer_Data\Managed\InControl.dll</HintPath>
+    </Reference>
+    <Reference Include="LogLibrary">
+      <HintPath>D:\SteamLibrary\steamapps\common\7 Days to Die Dedicated Server\7DaysToDieServer_Data\Managed\LogLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.1.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Refs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>D:\SteamLibrary\steamapps\common\7 Days to Die Dedicated Server\7DaysToDieServer_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\7 Days to Die Dedicated Server\7DaysToDieServer_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\7 Days to Die Dedicated Server\7DaysToDieServer_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="WebServer">
+      <HintPath>D:\SteamLibrary\steamapps\common\7 Days to Die Dedicated Server\Mods\TFP_WebServer\WebServer.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AntiCheat\AntiCheatItemScanner.cs" />
+    <Compile Include="Commands\AdminChatCommand.cs" />
+    <Compile Include="Commands\AdminVoteCommand.cs" />
+    <Compile Include="Commands\BringVehicleCommand.cs" />
+    <Compile Include="Commands\ClaimInfoCommand.cs" />
+    <Compile Include="Commands\ClaimRemoveCommand.cs" />
+    <Compile Include="Commands\ClaimRepairToggleCommand.cs" />
+    <Compile Include="Commands\CronInditCommand.cs" />
+    <Compile Include="Commands\Day7Command.cs" />
+    <Compile Include="Commands\DelTeleCommand.cs" />
+    <Compile Include="Commands\DewCollectorToggleCommand.cs" />
+    <Compile Include="Commands\DropCasinoCommand.cs" />
+    <Compile Include="Commands\EgyenlegCommand.cs" />
+    <Compile Include="Commands\EjectCommand.cs" />
+    <Compile Include="Commands\EntityRemoveCommand.cs" />
+    <Compile Include="Commands\EventCommand.cs" />
+    <Compile Include="Commands\FireworkCommand.cs" />
+    <Compile Include="Commands\GetHereCommand.cs" />
+    <Compile Include="Commands\GotoCommand.cs" />
+    <Compile Include="Commands\HalalCommand.cs" />
+    <Compile Include="Commands\HomeCommand.cs" />
+    <Compile Include="Commands\HomerunCommand.cs" />
+    <Compile Include="Commands\HordaCommand.cs" />
+    <Compile Include="Commands\InfoCommand.cs" />
+    <Compile Include="Commands\JatekosCommand.cs" />
+    <Compile Include="Commands\JavitCommand.cs" />
+    <Compile Include="Commands\ListEntityCommand.cs" />
+    <Compile Include="Commands\ListTeleCommand.cs" />
+    <Compile Include="Commands\ModApiCommand.cs" />
+    <Compile Include="Commands\OperenciaCommand.cs" />
+    <Compile Include="Commands\PetCommand.cs" />
+    <Compile Include="Commands\PlaySoundCommand.cs" />
+    <Compile Include="Commands\PlaySoundMixCommand.cs" />
+    <Compile Include="Commands\PoiResetCommand.cs" />
+    <Compile Include="Commands\RadioCommand.cs" />
+    <Compile Include="Commands\ReturnCommand.cs" />
+    <Compile Include="Commands\SetTeleCommand.cs" />
+    <Compile Include="Commands\TeleCommand.cs" />
+    <Compile Include="Commands\TimeCommand.cs" />
+    <Compile Include="Commands\UseTokenCommand.cs" />
+    <Compile Include="Commands\VehicleInfoCommand.cs" />
+    <Compile Include="Commands\VoteCommand.cs" />
+    <Compile Include="Core\ChatHook.cs" />
+    <Compile Include="Commands\IChatCommand.cs" />
+    <Compile Include="Core\ClaimZoneResolver.cs" />
+    <Compile Include="Core\CommandCooldownManager.cs" />
+    <Compile Include="Core\CommandProcessor.cs" />
+    <Compile Include="Core\Cron\CronType.cs" />
+    <Compile Include="Core\Cron\InternalCronService.cs" />
+    <Compile Include="Core\Cron\Jobs\BloodMoonAnnouncer.cs" />
+    <Compile Include="Core\DiscordHooks.cs" />
+    <Compile Include="Core\DiscordNotifier.cs" />
+    <Compile Include="Core\FeatureManager.cs" />
+    <Compile Include="Core\ModAPI.cs" />
+    <Compile Include="Core\OperenciaSettings.cs" />
+    <Compile Include="Core\PetFollowerSystem.cs" />
+    <Compile Include="Core\PetTeleportHelper.cs" />
+    <Compile Include="Core\PlayerProfileStorage.cs" />
+    <Compile Include="Core\TeleportMemory.cs" />
+    <Compile Include="Core\TeleportStorage.cs" />
+    <Compile Include="Core\VehicleMemory.cs" />
+    <Compile Include="Core\WorldClockService.cs" />
+    <Compile Include="Events\ChallengeRegistry.cs" />
+    <Compile Include="Events\Challenges\DeadeyeChallenge.cs" />
+    <Compile Include="Events\Challenges\DistanceRunnerChallenge.cs" />
+    <Compile Include="Events\Challenges\EventContext.cs" />
+    <Compile Include="Events\Challenges\EventManager.cs" />
+    <Compile Include="Events\Challenges\IEventChallenge.cs" />
+    <Compile Include="Events\Challenges\PlayerEventState.cs" />
+    <Compile Include="Events\Challenges\ZombieSlayerChallenge.cs" />
+    <Compile Include="Events\ClaimAutoRepair.cs" />
+    <Compile Include="Events\ClaimRepairState.cs" />
+    <Compile Include="Events\ClaimWatcher.cs" />
+    <Compile Include="Events\GameMessageSuppressor.cs" />
+    <Compile Include="Events\LootContainerWatcher.cs" />
+    <Compile Include="Events\PetDeathHandler.cs" />
+    <Compile Include="Events\PetRegistry.cs" />
+    <Compile Include="Events\PetWatcher.cs" />
+    <Compile Include="Events\PlayerEventHook.cs" />
+    <Compile Include="Events\PoiEntryWatcher.cs" />
+    <Compile Include="Events\RewardManager.cs" />
+    <Compile Include="Events\ServerStatusReporter.cs" />
+    <Compile Include="Events\TokenHandler.cs" />
+    <Compile Include="Events\TraderDoorWatcher.cs" />
+    <Compile Include="Events\SanctuaryEntityWatcher.cs" />
+    <Compile Include="Events\VehicleSpeedUpdater.cs" />
+    <Compile Include="Harmony\BlockPlacementPatch.cs" />
+    <Compile Include="Harmony\ChatMessageServerPatch.cs" />
+    <Compile Include="Harmony\DeadeyeAwardKillPatch.cs" />
+    <Compile Include="Harmony\DewCollectorTELockPatch.cs" />
+    <Compile Include="Harmony\PetPatches.cs" />
+    <Compile Include="Harmony\QuestLogger.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
