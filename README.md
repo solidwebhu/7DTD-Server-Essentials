@@ -6,6 +6,9 @@ An advanced server-side mod for 7 Days to Die dedicated servers.
 
 This project extends the default game experience with a large collection of administration tools, player commands, Discord integration, anti-griefing systems, automated server events, pet companions, vehicle management and various quality-of-life improvements.
 
+This project was originally developed for a private community server and is published as-is for educational and community use.
+Feel free to modify it for your own server.
+
 ## Main Features
 
 ### Player Commands
