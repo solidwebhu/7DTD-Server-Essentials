@@ -1,6 +1,6 @@
 # 7DTD-Server-Essentials
 Advanced 7 Days to Die dedicated server mod featuring player commands, Discord integration, claim protection, anti-cheat, events, automation and quality-of-life improvements.
-# 7DTD Server Essentials
+
 
 An advanced server-side mod for 7 Days to Die dedicated servers.
 
